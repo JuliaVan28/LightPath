@@ -14,6 +14,18 @@
 		329A04662BADD62E00AFCDC7 /* LightPathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329A04652BADD62E00AFCDC7 /* LightPathTests.swift */; };
 		329A04702BADD62E00AFCDC7 /* LightPathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329A046F2BADD62E00AFCDC7 /* LightPathUITests.swift */; };
 		329A04722BADD62E00AFCDC7 /* LightPathUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329A04712BADD62E00AFCDC7 /* LightPathUITestsLaunchTests.swift */; };
+		329A047F2BADD70D00AFCDC7 /* GraphCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329A047E2BADD70D00AFCDC7 /* GraphCanvasView.swift */; };
+		329A04812BAF391800AFCDC7 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329A04802BAF391800AFCDC7 /* MainScene.swift */; };
+		32A0C6292BBC069E0060738F /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0C6282BBC069E0060738F /* ScreenSize.swift */; };
+		32A0C62F2BBC12230060738F /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 32A0C62E2BBC12230060738F /* Collections */; };
+		32A0C6312BBC12230060738F /* HeapModule in Frameworks */ = {isa = PBXBuildFile; productRef = 32A0C6302BBC12230060738F /* HeapModule */; };
+		32A0C6332BBC124A0060738F /* Dijkstra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0C6322BBC124A0060738F /* Dijkstra.swift */; };
+		32A0C6352BBD75160060738F /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0C6342BBD75160060738F /* Heap.swift */; };
+		32DDE8E22BAF77B000C9C348 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDE8E12BAF77B000C9C348 /* Vertex.swift */; };
+		32DDE8E52BB0DAC800C9C348 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDE8E42BB0DAC800C9C348 /* Edge.swift */; };
+		32DDE8E72BB1D03500C9C348 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDE8E62BB1D03500C9C348 /* Graph.swift */; };
+		32DDE8E92BB2F35A00C9C348 /* SKShapeNode+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDE8E82BB2F35A00C9C348 /* SKShapeNode+Ext.swift */; };
+		32DDE8EB2BB2F39100C9C348 /* MainSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DDE8EA2BB2F39100C9C348 /* MainSceneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +56,16 @@
 		329A046B2BADD62E00AFCDC7 /* LightPathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightPathUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		329A046F2BADD62E00AFCDC7 /* LightPathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPathUITests.swift; sourceTree = "<group>"; };
 		329A04712BADD62E00AFCDC7 /* LightPathUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPathUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		329A047E2BADD70D00AFCDC7 /* GraphCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCanvasView.swift; sourceTree = "<group>"; };
+		329A04802BAF391800AFCDC7 /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
+		32A0C6282BBC069E0060738F /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
+		32A0C6322BBC124A0060738F /* Dijkstra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dijkstra.swift; sourceTree = "<group>"; };
+		32A0C6342BBD75160060738F /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		32DDE8E12BAF77B000C9C348 /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		32DDE8E42BB0DAC800C9C348 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		32DDE8E62BB1D03500C9C348 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		32DDE8E82BB2F35A00C9C348 /* SKShapeNode+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKShapeNode+Ext.swift"; sourceTree = "<group>"; };
+		32DDE8EA2BB2F39100C9C348 /* MainSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A0C6312BBC12230060738F /* HeapModule in Frameworks */,
+				32A0C62F2BBC12230060738F /* Collections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +118,11 @@
 		329A04532BADD62C00AFCDC7 /* LightPath */ = {
 			isa = PBXGroup;
 			children = (
-				329A04542BADD62C00AFCDC7 /* LightPathApp.swift */,
-				329A04562BADD62C00AFCDC7 /* ContentView.swift */,
+				32A0C6272BBC06810060738F /* Views */,
+				329A04802BAF391800AFCDC7 /* MainScene.swift */,
+				32DDE8EA2BB2F39100C9C348 /* MainSceneViewController.swift */,
+				32A0C62A2BBC06BB0060738F /* Utilities */,
+				32DDE8E32BAF77B900C9C348 /* Models */,
 				329A04582BADD62E00AFCDC7 /* Assets.xcassets */,
 				329A045A2BADD62E00AFCDC7 /* Preview Content */,
 			);
@@ -127,6 +154,37 @@
 			path = LightPathUITests;
 			sourceTree = "<group>";
 		};
+		32A0C6272BBC06810060738F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				329A04542BADD62C00AFCDC7 /* LightPathApp.swift */,
+				329A04562BADD62C00AFCDC7 /* ContentView.swift */,
+				329A047E2BADD70D00AFCDC7 /* GraphCanvasView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		32A0C62A2BBC06BB0060738F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				32DDE8E82BB2F35A00C9C348 /* SKShapeNode+Ext.swift */,
+				32A0C6282BBC069E0060738F /* ScreenSize.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		32DDE8E32BAF77B900C9C348 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				32DDE8E12BAF77B000C9C348 /* Vertex.swift */,
+				32DDE8E42BB0DAC800C9C348 /* Edge.swift */,
+				32DDE8E62BB1D03500C9C348 /* Graph.swift */,
+				32A0C6322BBC124A0060738F /* Dijkstra.swift */,
+				32A0C6342BBD75160060738F /* Heap.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +201,10 @@
 			dependencies = (
 			);
 			name = LightPath;
+			packageProductDependencies = (
+				32A0C62E2BBC12230060738F /* Collections */,
+				32A0C6302BBC12230060738F /* HeapModule */,
+			);
 			productName = LightPath;
 			productReference = 329A04512BADD62C00AFCDC7 /* LightPath.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +277,9 @@
 				Base,
 			);
 			mainGroup = 329A04482BADD62C00AFCDC7;
+			packageReferences = (
+				32A0C62D2BBC117D0060738F /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 329A04522BADD62C00AFCDC7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +322,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A0C6292BBC069E0060738F /* ScreenSize.swift in Sources */,
 				329A04572BADD62C00AFCDC7 /* ContentView.swift in Sources */,
+				32DDE8E92BB2F35A00C9C348 /* SKShapeNode+Ext.swift in Sources */,
+				32A0C6352BBD75160060738F /* Heap.swift in Sources */,
+				32DDE8EB2BB2F39100C9C348 /* MainSceneViewController.swift in Sources */,
+				329A04812BAF391800AFCDC7 /* MainScene.swift in Sources */,
+				32A0C6332BBC124A0060738F /* Dijkstra.swift in Sources */,
+				32DDE8E72BB1D03500C9C348 /* Graph.swift in Sources */,
+				32DDE8E52BB0DAC800C9C348 /* Edge.swift in Sources */,
 				329A04552BADD62C00AFCDC7 /* LightPathApp.swift in Sources */,
+				32DDE8E22BAF77B000C9C348 /* Vertex.swift in Sources */,
+				329A047F2BADD70D00AFCDC7 /* GraphCanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,8 +503,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,8 +532,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,6 +663,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32A0C62D2BBC117D0060738F /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32A0C62E2BBC12230060738F /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32A0C62D2BBC117D0060738F /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		32A0C6302BBC12230060738F /* HeapModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32A0C62D2BBC117D0060738F /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HeapModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 329A04492BADD62C00AFCDC7 /* Project object */;
 }
