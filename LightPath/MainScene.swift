@@ -151,8 +151,8 @@ extension MainScene {
     func showShortestPath(edges: [Edge]) {
         edges.forEach { edge in
             if let edge = self.scene?.childNode(withName: edge.spriteNode.name!) as? SKShapeNode {
-                    edge.strokeColor = .magenta
-                    edge.lineWidth = 7
+                edge.strokeColor = .systemPurple
+                edge.lineWidth = 7.0
             }
         }
     }
@@ -160,8 +160,8 @@ extension MainScene {
     func resetEdgesColor() {
         scene?.children.forEach({ node in
             if let edge = node as? SKShapeNode {
-                edge.strokeColor = .white
-
+                edge.strokeColor = .lightGray
+                edge.lineWidth = 2.0
             }
         })
     }

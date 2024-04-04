@@ -38,7 +38,7 @@ class MainSceneViewController {
         let vertexText = SKLabelNode(text: String(vertexLetter))
         vertexText.fontColor = .white
         vertexText.fontSize = 30
-        vertexText.fontName = "Futura-Bold"
+        vertexText.fontName = "GillSans-Bold"
         vertexText.verticalAlignmentMode = .top
         vertexText.horizontalAlignmentMode = .center
         vertexText.position.y += 70
@@ -60,10 +60,11 @@ class MainSceneViewController {
         let edgeWeight = getRandomWeight()
         
         let edgeText = SKLabelNode(text: String(edgeWeight))
-        edgeText.fontColor = .green
-        edgeText.fontSize = 20
-        edgeText.fontName = "Futura-Bold"
-        edgeText.position.x = edgeNode.frame.midX - 40
+        edgeText.fontColor = .white
+        
+        edgeText.fontSize = 25
+        edgeText.fontName = "GillSans-Bold"
+        edgeText.position.x = edgeNode.frame.midX - 20
         edgeText.position.y = edgeNode.frame.midY + 15
         edgeText.name = String(edgeWeight)
         edgeText.zPosition = 3

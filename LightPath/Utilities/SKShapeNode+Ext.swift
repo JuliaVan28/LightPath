@@ -11,8 +11,8 @@ import SpriteKit
 extension SKShapeNode {
     convenience init(start: CGPoint,
                      end: CGPoint,
-                     strokeColor: UIColor = .white,
-                     lineWidth: CGFloat = 3.0) {
+                     strokeColor: UIColor = .lightGray,
+                     lineWidth: CGFloat = 2.0) {
         self.init()
 
         let path = CGMutablePath()

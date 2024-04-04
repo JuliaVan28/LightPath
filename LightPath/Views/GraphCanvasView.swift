@@ -26,98 +26,111 @@ struct GraphCanvasView: View {
     @State var textFieldBackgroundColor: Color = .clear
     
     var body: some View {
-        VStack(spacing: 0) {
-            SpriteView(scene: self.mainScene)
-                .statusBar(hidden: true)
-                .ignoresSafeArea()
-            HStack(spacing: 25) {
-                 Spacer()
-                
-                Text("From:")
-                    .opacity(0.8)
-                
-                TextField("", text: $startVertexLetter)
-                    .frame(width: 100, height: 80)
-                    .background(content: {
-                        RoundedRectangle(cornerRadius: 30.0)
-                            .fill(.thinMaterial)
-                            .frame(width: 120, height: 80)
-                            .preferredColorScheme(.dark)
-                            .overlay(RoundedRectangle(cornerRadius: 30.0).stroke(.purple, lineWidth: 2))
-                            .background(textFieldBackgroundColor.opacity(0.8).clipShape(RoundedRectangle(cornerRadius: 30)))
-                    })
-                    .onChange(of: startVertexLetter, {
-                        self.startVertexLetter = String(startVertexLetter.prefix(1))
-                    })
-                
-                Spacer()
-                
-                Text("To:")
-                    .opacity(0.8)
-                
-                TextField("", text: $endVertexLetter)
-                    .frame(width: 100, height: 80)
-                    .background(content: {
-                        RoundedRectangle(cornerRadius: 30.0)
-                            .fill(.thinMaterial)
-                            .frame(width: 120, height: 80)
-                            .overlay(RoundedRectangle(cornerRadius: 30.0).stroke(.purple, lineWidth: 2))
-                            .background(textFieldBackgroundColor.opacity(0.8).clipShape(RoundedRectangle(cornerRadius: 30)))
-                    })
-                    .onChange(of: endVertexLetter, {
-                        self.endVertexLetter = String(endVertexLetter.prefix(1))
-                    })
-                
-            
-                
-                Spacer()
-                
-                
-                Button(action: {
-                    mainScene.resetEdgesColor()
-                    do {
-                        try mainScene.viewController.findStartEndVertexes(from: startVertexLetter, to: endVertexLetter)
-                        
-                        if let shortestPath = mainScene.viewController.dijkstraShortestPath() {
-                            mainScene.showShortestPath(edges: shortestPath)
+        
+        GeometryReader { geom in
+            ZStack {
+                SpriteView(scene: self.mainScene)
+                    .statusBar(hidden: true)
+                    .ignoresSafeArea()
+                //HStack(spacing: 25) {
+                   //  Spacer()
+                    
+                   /* Text("From:")
+                        .opacity(0.8)
+                    */
+                VStack {
+                    Spacer()
+                    HStack {
+                            TextField("From", text: $startVertexLetter)
+                                .frame(width: 150, height: 80)
+                                .background(content: {
+                                    RoundedRectangle(cornerRadius: 25.0)
+                                        .fill(.thinMaterial)
+                                        .frame(width: 150, height: 80)
+                                        .overlay(RoundedRectangle(cornerRadius: 25.0).stroke(.purple, lineWidth: 3))
+                                        .background(textFieldBackgroundColor.opacity(0.8).clipShape(RoundedRectangle(cornerRadius: 25)))
+                                })
+                                .onChange(of: startVertexLetter, {
+                                    self.startVertexLetter = String(startVertexLetter.prefix(1))
+                                })
+                            
+                            // Spacer()
+                            
+                            /*  Text("To:")
+                             .opacity(0.8)
+                             */
+                            Image(systemName: "arrow.right")
+                            
+                            TextField("To", text: $endVertexLetter)
+                                .frame(width: 150, height: 80)
+                                .background(content: {
+                                    RoundedRectangle(cornerRadius: 25.0)
+                                        .fill(.thinMaterial)
+                                        .frame(width: 150, height: 80)
+                                        .overlay(RoundedRectangle(cornerRadius: 25.0).stroke(.purple, lineWidth: 3))
+                                        .background(textFieldBackgroundColor.clipShape(RoundedRectangle(cornerRadius: 25)))
+                                })
+                                .onChange(of: endVertexLetter, {
+                                    self.endVertexLetter = String(endVertexLetter.prefix(1))
+                                })
+                            
+                            
+                            
+                            // Spacer()
+                            
+                            
+                            Button(action: {
+                                mainScene.resetEdgesColor()
+                                do {
+                                    try mainScene.viewController.findStartEndVertexes(from: startVertexLetter, to: endVertexLetter)
+                                    
+                                    if let shortestPath = mainScene.viewController.dijkstraShortestPath() {
+                                        mainScene.showShortestPath(edges: shortestPath)
+                                    }
+                                } catch {
+                                    print("vertexes aren't found")
+                                    textFieldBackgroundColor = .red
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                        textFieldBackgroundColor = .clear
+                                    }
+                                }
+                                
+                                
+                            }, label: {
+                                Text("Find path")
+                                //Image(systemName: "play.fill")
+                                    .padding(25)
+                            })
+                            .background() {
+                                RoundedRectangle(cornerRadius: 30)
+                                    .fill(Color.purple)
+                                // .fill(.ultraThickMaterial)
+                                //.overlay(RoundedRectangle(cornerRadius: 30.0).stroke(.purple, lineWidth: 4))
+                            }
+                            .padding()
+                            
                         }
-                    } catch {
-                        print("vertexes aren't found")
-                        textFieldBackgroundColor = .red
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                            textFieldBackgroundColor = .clear
-                        }
+                        .frame(height: geom.size.height * 0.13)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.white)
+                        .multilineTextAlignment(.center)
+                       
+                        .padding(.horizontal, geom.size.width * 0.03)
+                        .background {
+                            RoundedRectangle(cornerRadius: 40.0, style: .continuous)
+                                .fill(.ultraThinMaterial)
                     }
+                }.padding(.bottom, geom.size.height * 0.06)
                     
-                    
-                }, label: {
-                    Text("Find Path")
-                        .padding(30)
-                })
-                .background() {
-                    RoundedRectangle(cornerRadius: 30)
-                        .fill(.ultraThickMaterial)
-                        .overlay(RoundedRectangle(cornerRadius: 30.0).stroke(.purple, lineWidth: 4))
+                   // Spacer()
                 }
-                .padding()
                 
                 
-                Spacer()
-            }.font(.title)
-            .fontWeight(.bold)
-            .fontWidth(.expanded)
-            .foregroundStyle(.white)
-            .multilineTextAlignment(.center)
-            .padding(.bottom, 60)
-            .padding(.horizontal, 30)
-            .background {
-                Rectangle().fill(.thinMaterial)
-            }
-            
-        }.background(content: {
-            Image("background")
-        })
-        .ignoresSafeArea()
+                
+       //
+        .preferredColorScheme(.dark)
+        } .ignoresSafeArea()
     }
 }
 
